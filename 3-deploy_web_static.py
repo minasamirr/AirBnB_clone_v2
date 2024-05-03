@@ -9,7 +9,7 @@ from datetime import datetime
 from fabric.operations import put, run
 from fabric.context_managers import cd
 
-env.hosts = ['<IP web-01>', '<IP web-02>']
+env.hosts = ['100.25.179.159', '54.145.241.80']
 
 
 def do_pack():
