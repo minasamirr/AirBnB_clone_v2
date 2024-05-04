@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """
-Script that starts a Flask web application.
+starts a Flask web application
 """
 
-from flask import Flask, escape
-
+from flask import Flask
 app = Flask(__name__)
 
 
@@ -14,9 +13,9 @@ def index():
     Route that returns a message when accessed.
 
     Returns:
-        str: Message "Hello HBNB!".
+        str: A greeting message "Hello HBNB!".
     """
-    return "Hello HBNB!"
+    return 'Hello HBNB!'
 
 
 @app.route('/hbnb', strict_slashes=False)
@@ -25,26 +24,26 @@ def hbnb():
     Route that returns a message when accessed.
 
     Returns:
-        str: Message "HBNB".
+        str: A message "HBNB".
     """
-    return "HBNB"
+    return 'HBNB'
 
 
-@app.route('/c/<text>', strict_slashes=False)
+@app.route('/hbnb', strict_slashes=False)
 def cisamazing(text):
-    """
-    Route that returns a message when accessed.
+    """ Route that returns a message when accessed.
 
     Args:
-        text (str): Text variable.
+        text (str): The text variable appended to "C".
 
     Returns:
-        str: Message "C " followed by the value of the text variable.
+        str: The message "C " followed by the value of the text variable
+             (with underscores replaced by spaces).
     """
-    return 'c ' + text.replace('_', ' ')
+    return 'c' + text.replace('_', '')
 
 
-@app.route('/python/', defaults={'text': 'is cool'}, strict_slashes=False)
+@app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def pythonstyle(text=' is cool'):
     """
@@ -56,8 +55,8 @@ def pythonstyle(text=' is cool'):
     Returns:
         str: Message "Python " followed by the value of the text variable.
     """
-    return "Python {}".format(escape(text).replace('_', ' '))
+    return 'python' + text.replace('_', ' ')
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port='5000')
