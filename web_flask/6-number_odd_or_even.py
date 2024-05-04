@@ -83,7 +83,7 @@ def display_number_template(n):
     Returns:
         rendered_template: HTML template with the number.
     """
-    return render_templates('5-number.html', number=n)
+    return render_template('5-number.html', number=n)
 
 
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
@@ -99,7 +99,7 @@ def display_number_odd_or_even(n):
         rendered_template: HTML template with the number and whether it is
         odd or even.
     """
-    return render_templates(
+    return render_template(
             '6-number_odd_or_even.html', number=n, odd_or_even="even"
             if n % 2 == 0 else "odd")
 
