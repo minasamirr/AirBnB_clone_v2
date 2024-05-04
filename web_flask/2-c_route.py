@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 Script that starts a Flask web application.
+C is fun!
 """
 
 from flask import Flask, escape
