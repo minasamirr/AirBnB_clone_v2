@@ -73,7 +73,7 @@ def is_number(n):
 
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
-def display_number_template(n):
+def numandtemp(n):
     """
     Route that renders an HTML template with the number.
 
