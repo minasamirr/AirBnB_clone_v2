@@ -40,7 +40,7 @@ def cisamazing(text):
         str: The message "C " followed by the value of the text variable
              (with underscores replaced by spaces).
     """
-    return 'c' + text.replace('_', '')
+    return 'C' + text.replace('_', ' ')
 
 
 if __name__ == '__main__':
