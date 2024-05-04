@@ -29,7 +29,7 @@ def hbnb():
     return 'HBNB'
 
 
-@app.route('/hbnb', strict_slashes=False)
+@app.route('/c.<text>', strict_slashes=False)
 def cisamazing(text):
     """ Route that returns a message when accessed.
 
