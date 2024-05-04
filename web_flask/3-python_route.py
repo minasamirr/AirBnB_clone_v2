@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def hello_hbnb():
+def index():
     """
     Route that returns a message when accessed.
 
@@ -20,7 +20,7 @@ def hello_hbnb():
 
 
 @app.route('/hbnb', strict_slashes=False)
-def display_hbnb():
+def hbnb():
     """
     Route that returns a message when accessed.
 
@@ -31,7 +31,7 @@ def display_hbnb():
 
 
 @app.route('/c/<text>', strict_slashes=False)
-def display_c(text):
+def cisamazing(text):
     """
     Route that returns a message when accessed.
 
@@ -41,12 +41,12 @@ def display_c(text):
     Returns:
         str: Message "C " followed by the value of the text variable.
     """
-    return "C {}".format(escape(text).replace('_', ' '))
+    return 'c ' + text.replace('_', ' ')
 
 
 @app.route('/python/', defaults={'text': 'is cool'}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def display_python(text):
+def pythonstyle(text=' is cool'):
     """
     Route that returns a message when accessed.
 
