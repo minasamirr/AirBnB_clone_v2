@@ -1,8 +1,13 @@
 #!/usr/bin/python3
 """
 Script that starts a Flask web application.
-"""
 
+This script defines routes for a Flask web application to display various messages.
+Routes:
+    /: Displays a greeting message "Hello HBNB!".
+    /hbnb: Displays a message "HBNB".
+    /c/<text>: Displays "C " followed by the value of the text variable (with underscores replaced by spaces).
+"""
 from flask import Flask, escape
 
 app = Flask(__name__)
