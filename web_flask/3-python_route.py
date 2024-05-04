@@ -55,7 +55,7 @@ def pythonstyle(text=' is cool'):
     Returns:
         str: Message "Python " followed by the value of the text variable.
     """
-    return 'python' + text.replace('_', ' ')
+    return 'Python' + text.replace('_', ' ')
 
 
 if __name__ == '__main__':
