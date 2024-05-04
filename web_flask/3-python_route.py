@@ -29,7 +29,7 @@ def hbnb():
     return 'HBNB'
 
 
-@app.route('/hbnb', strict_slashes=False)
+@app.route('/c/<text>', strict_slashes=False)
 def cisamazing(text):
     """ Route that returns a message when accessed.
 
@@ -40,7 +40,7 @@ def cisamazing(text):
         str: The message "C " followed by the value of the text variable
              (with underscores replaced by spaces).
     """
-    return 'c' + text.replace('_', '')
+    return 'C' + text.replace('_', ' ')
 
 
 @app.route('/python', strict_slashes=False)
@@ -55,7 +55,7 @@ def pythonstyle(text=' is cool'):
     Returns:
         str: Message "Python " followed by the value of the text variable.
     """
-    return 'Python' + text.replace('_', '')
+    return 'Python' + text.replace('_', ' ')
 
 
 if __name__ == '__main__':
