@@ -12,9 +12,6 @@ app = Flask(__name__)
 def hello_hbnb():
     """
     Route that returns a message when accessed.
-
-    Returns:
-        str: Message "Hello HBNB!".
     """
     return 'Hello HBNB!'
 
@@ -23,9 +20,6 @@ def hello_hbnb():
 def display_hbnb():
     """
     Route that returns a message when accessed.
-
-    Returns:
-        str: Message "HBNB".
     """
     return 'HBNB'
 
@@ -34,12 +28,6 @@ def display_hbnb():
 def display_c(text):
     """
     Route that returns a message when accessed.
-
-    Args:
-        text (str): Text variable.
-
-    Returns:
-        str: Message "C " followed by the value of the text variable.
     """
     return 'c' + text.replace('_', '')
 
